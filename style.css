@@ -1,0 +1,387 @@
+*{
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+}
+a{
+      color: black;
+      text-decoration: none;
+}
+i{
+      display: block;
+      color: rgb(212, 88, 31);
+      width: 100px;
+}
+img{
+      display: block;
+      width: 100%;
+}
+body{
+      margin:0px;
+      padding: 0px;
+      background-color: rgb(240, 198, 12);
+}
+.section1{
+      margin: 5%;
+      padding: 2%;
+      background-color: rgb(241, 245, 248)
+}
+    /* Header Styling */
+ header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin:10px;
+      /* margin-right:5%; */
+}
+.logo{
+      width: 30%;
+}
+header h2{
+      color: rgb(184, 184, 8);
+      font-size: 30px;
+}
+header span{
+       color: green;
+       font-size: 25px;
+}
+nav{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 70%;
+}
+nav ul{
+      display: flex;
+      justify-content: space-between;
+      margin-right: 40px;
+}
+nav ul li{
+      list-style: none;
+}
+nav ul li a{
+      padding: 20px;
+      text-align: center;
+      color: green;
+}
+nav ul li a:hover{
+      color: yellowgreen;
+}
+header button{
+      width: 100px;
+      height: 35px;
+      color: rgb(241, 150, 13);
+      background-color:rgb(241, 150, 13);
+      border: 2px solid rgb(241, 150, 13);
+      border-radius: 5px; 
+}
+.hamburger-icon{
+      display: none;
+}
+/* mini-container styling */
+.section1-content{
+      display: flex;
+      justify-content: space-between;
+      margin: auto;
+}
+.healthy-meals{
+      width: 50%;
+}
+.healthy-meals h3{
+      font-size: 45px;
+}
+.healthy-meals p{
+      font-size: 16px;  
+      width: 70%;
+}
+.healthy-meals button{
+      width: 150px;
+      height: 35px;
+      border-radius: 5px;
+      border: none;
+      background-color:rgb(241, 150, 13);
+}
+.shopping-cart{
+      width: 30px;
+      height: 30px;
+}
+.food-picture{
+      width: 50%;
+}
+.food-picture img{
+      border-radius: 50%;
+      width: 350px;
+      height: 350px;
+      object-fit: cover;
+      object-position: right;
+      margin: 10% auto;
+      
+}
+
+  /* section2 styling */
+
+  .section2{
+      margin:5%;
+      margin-bottom: 0;
+      padding:4%;
+      padding-bottom: 0px;
+      background-color: rgb(241, 245, 248);    
+  }
+.how-to-order{
+      margin: 0px auto;
+      text-align: center;
+      line-height: 18px;
+} 
+.how-to-order h2{
+      font-size: 25px;
+}
+.how-to-order p{
+      font-size: 18px;
+}
+
+/* payment process styling */
+.order-process{
+      display: flex;
+      justify-content:space-between;
+}
+i{
+      padding-top: 10px;
+      /* width: 80px; */
+}
+.steps, .meals{
+      background-color: white;
+      border-radius: 10px;
+      width: 23%;
+      padding: 5px;
+      text-align: center;
+}
+
+ /* menu styling */
+.menu-heading{
+      margin-top: 5%;
+      text-align: center;
+      line-height: 10px;  
+      font-size: 25px; 
+}
+.menu-heading h2{
+      font-size: 25px;
+}
+.menu-heading p{
+      font-size: 18px;
+}
+.menu{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top:5px; 
+      overflow: hidden 
+}
+.menu-heading{
+      line-height: 20px;
+}
+.meals{
+      background-color: white;
+      border-radius: 10px;
+      padding: 40px 15px;
+      margin-bottom: 30px;
+      overflow: hidden;
+}
+ .mealpicturecontainer{
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      margin: 10px auto;
+      overflow: hidden;
+ }
+.mealpicturecontainer img{
+      width: 100%;
+      height: 100%;
+      transform: scale(1.1);
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+       transition: 0.7s ease;
+}
+.mealpicturecontainer img:hover{
+      transform: scale(1);
+     
+}
+.meals p{
+      text-align: center;
+      padding-top: 2px;
+      padding-bottom: 5px;
+}
+ .meals button{
+      width: 150px;
+      height: 35px;
+      display: block;
+      margin: 10px auto;
+      background-color: rgb(241, 150, 13);
+      border-radius: 5px;
+      border: none;
+}
+footer{
+      background-color: white;
+      /* width: 0%; */
+      padding: 1% 0;
+      margin-top: 0;
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-bottom: 5%;
+}
+     
+footer button{
+      width: 130px;
+      height: 30px;
+      display: block; 
+      margin: 0px auto;
+      border-radius: 5px;
+      background-color:white ;
+      color: rgb(241, 150, 13);
+      border: 2px solid rgb(241, 150, 13);
+}
+
+.example {
+     margin-top: 100px;
+     height: 100vh;
+     background-color: salmon;
+     padding-top: 20px;
+}
+
+.box {
+     width: 200px;
+     height: 200px;
+     margin: 20px auto;
+     overflow: hidden;
+}
+
+.box-1 {
+     background-color: violet;
+}
+
+.box img {
+     width: 100%;
+     height: 100%;
+     transform: scale(1.1);
+     object-fit: cover;
+     
+}
+
+.box-1 img:hover {
+     transform: scale(1);
+     transition: 3sec ease-in-out;
+     background-color: red;
+}
+
+.box-2 {
+     background-color: aquamarine;
+}
+/* tablet view */
+@media (max-width:1200px){
+      /*section1 content styling */ 
+      nav ul li, header button, .fa-regular fa-cart-shopping{
+        display: none;
+      }
+      .hamburger-icon{
+        display: block;
+        width: 30px;
+        height: 30px;
+      }
+      .shopping-cart{
+            display: none;
+      }
+      /* .logo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }  */
+     .healthy-meals p{
+          width: 100%;
+        }
+        .healthy-meals h3{
+              font-size: 35px;
+        }
+     .food-picture img
+          /* width: 265px;
+          height: 265px;
+          object-fit: cover;
+          object-position: right;
+        } */
+      
+      /* payment process styling */
+       .menu{
+          display: flex;
+          flex-wrap:wrap;
+        }
+        .order-process{
+          display: flex;
+          flex-wrap:wrap;
+        }
+      .steps, .meals{
+          /* background-color: white; */
+          border-radius: 10px;
+          width: 49%;
+          margin-bottom: 10px;
+          padding: 5px;
+          text-align: center;
+        }
+      .menu{
+          margin-bottom: 20px;
+        }
+  }
+  
+  /* Mobile Layout */
+  
+  @media(max-width:768px){
+       header button, header i .fa-regular{
+        display: none;
+      }
+      nav ul li{
+        display: none;
+      } 
+      .hamburger-icon{
+        display: block;
+        width: 30px;
+        height: 30px;
+      }
+      .shopping-cart{
+            display: none;
+      }
+      /* mini-container-styling */
+       .food-picture{
+           display: none;
+       }
+       .healthy-meals{
+           width: 100%;
+           margin:10px auto;
+           text-align: center;
+       }
+      .healthy-meals h3{
+          font-size: 25px;
+    }
+       .healthy-meals p{
+           width: 100%;
+    }
+       /* .healthy-meals button{ */
+        /* width: 100px;
+        height: 35px; */
+        /* border-radius: 5px;
+        border: none; */
+        /* background-color:rgb(241, 150, 13); */
+       
+    
+    /* payment process */
+    .order-process, .menu{
+        display:block;
+        margin-bottom: 5%;
+    }
+    .steps, .meals{
+        background-color: white;
+        border-radius: 10px;
+        width: 100%;
+        margin: 10px auto;
+    }
+  }
+    
+  
