@@ -9,7 +9,7 @@ a{
 }
 i{
       display: block;
-      color: rgb(212, 88, 31);
+      color:black;
       width: 100px;
 }
 img{
@@ -27,48 +27,64 @@ body{
       background-color: rgb(241, 245, 248)
 }
     /* Header Styling */
- header{
+header{
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin:10px;
-      /* margin-right:5%; */
+     justify-content: space-between;   
+     align-items: center;
+ }
+ .logo{
+      width: 20%;
 }
-.logo{
-      width: 30%;
-}
-header h2{
+.logo h2{
       color: rgb(184, 184, 8);
       font-size: 30px;
 }
-header span{
+.logo span{
        color: green;
        font-size: 25px;
 }
-nav{
+ nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      /* width: 100% */
+}
+.hamburger-icon, .close, .nav-checkbox{
+      display: none;
+}
+/* nav{
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      width: 70%;
-}
-nav ul{
+  
+} */
+.nav-menu{
       display: flex;
-      justify-content: space-between;
-      margin-right: 40px;
+      justify-content: space-around;
+      align-items: center;
+      width: 70%;
+      text-align: center;
+      /* margin-right: 40px; */
 }
-nav ul li{
+.nav-menu li{
       list-style: none;
 }
-nav ul li a{
-      padding: 20px;
+.nav-menu a{
       text-align: center;
       color: green;
+      
 }
-nav ul li a:hover{
+ul .nav-menu:hover{
       color: yellowgreen;
 }
-header button{
+.btn-cart{
+      display: flex;
+      width: 30%;
+      justify-content: space-around;
+}
+button{
       width: 100px;
       height: 35px;
       color: rgb(241, 150, 13);
@@ -76,10 +92,11 @@ header button{
       border: 2px solid rgb(241, 150, 13);
       border-radius: 5px; 
 }
-.hamburger-icon{
-      display: none;
+.shopping-cart{
+      width: 30px;
+      height: 30px;
 }
-/* mini-container styling */
+/*Hero-section styling */
 .section1-content{
       display: flex;
       justify-content: space-between;
@@ -102,10 +119,7 @@ header button{
       border: none;
       background-color:rgb(241, 150, 13);
 }
-.shopping-cart{
-      width: 30px;
-      height: 30px;
-}
+
 .food-picture{
       width: 50%;
 }
@@ -121,7 +135,7 @@ header button{
 
   /* section2 styling */
 
-  .section2{
+.section2{
       margin:5%;
       margin-bottom: 0;
       padding:4%;
@@ -145,9 +159,9 @@ header button{
       display: flex;
       justify-content:space-between;
 }
-i{
+i, svg{
       padding-top: 10px;
-      /* width: 80px; */
+     
 }
 .steps, .meals{
       background-color: white;
@@ -155,6 +169,8 @@ i{
       width: 23%;
       padding: 5px;
       text-align: center;
+      box-shadow:3px 2px 2px rgba(27, 9, 9, 0.2), -3px -2px 2px rgba(27, 9, 9, 0.2)
+    
 }
 
  /* menu styling */
@@ -242,73 +258,65 @@ footer button{
       border: 2px solid rgb(241, 150, 13);
 }
 
-.example {
-     margin-top: 100px;
-     height: 100vh;
-     background-color: salmon;
-     padding-top: 20px;
-}
-
-.box {
-     width: 200px;
-     height: 200px;
-     margin: 20px auto;
-     overflow: hidden;
-}
-
-.box-1 {
-     background-color: violet;
-}
-
-.box img {
-     width: 100%;
-     height: 100%;
-     transform: scale(1.1);
-     object-fit: cover;
-     
-}
-
-.box-1 img:hover {
-     transform: scale(1);
-     transition: 3sec ease-in-out;
-     background-color: red;
-}
-
-.box-2 {
-     background-color: aquamarine;
-}
 /* tablet view */
 @media (max-width:1200px){
-      /*section1 content styling */ 
-      nav ul li, header button, .fa-regular fa-cart-shopping{
-        display: none;
+      /* header-styling */
+      header {
+            position: relative;
       }
-      .hamburger-icon{
-        display: block;
-        width: 30px;
-        height: 30px;
-      }
-      .shopping-cart{
+      .nav-menu li{
             display: none;
       }
-      /* .logo{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }  */
+      .btn-cart{
+            display: none;
+      }
+       .nav-toggle{
+            position: absolute;
+            cursor: pointer;
+            margin:0rem 5rem;
+            right: 0;
+            }
+      .nav-toggle .hamburger-icon{
+            display: block;
+      }
+        svg{
+            width:1.5rem;
+            fill: black;
+        }
+           
+         .nav-checkbox:checked ~ label.nav-toggle .close{
+             display: block;
+       }
+         .nav-checkbox:checked ~ .nav-menu li{
+            display:block;    
+      }
+         .nav-checkbox:checked ~ label.nav-toggle .hamburger-icon{
+             display: none;
+      }
+      .nav-checkbox:checked ~ .nav-menu {
+            background-color: white;
+            opacity: 0.9;
+            margin-top: 2rem;
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+            /* margin: 3rem; */
+            margin-right: 0;
+            margin-top: 10%;
+            position: absolute;
+            top: 50px;
+            width: 50%;
+            right: 0;
+      }
+      /*section1 content styling */ 
      .healthy-meals p{
           width: 100%;
         }
         .healthy-meals h3{
               font-size: 35px;
         }
-     .food-picture img
-          /* width: 265px;
-          height: 265px;
-          object-fit: cover;
-          object-position: right;
-        } */
-      
       /* payment process styling */
        .menu{
           display: flex;
@@ -333,22 +341,14 @@ footer button{
   
   /* Mobile Layout */
   
-  @media(max-width:768px){
-       header button, header i .fa-regular{
-        display: none;
-      }
-      nav ul li{
-        display: none;
-      } 
-      .hamburger-icon{
-        display: block;
-        width: 30px;
-        height: 30px;
-      }
-      .shopping-cart{
-            display: none;
-      }
+  @media(max-width:760px){
       /* mini-container-styling */
+      .nav-toggle{
+            position: absolute;
+            cursor: pointer;
+            margin:0rem 1rem;
+            right: 0;
+            }
        .food-picture{
            display: none;
        }
@@ -363,14 +363,6 @@ footer button{
        .healthy-meals p{
            width: 100%;
     }
-       /* .healthy-meals button{ */
-        /* width: 100px;
-        height: 35px; */
-        /* border-radius: 5px;
-        border: none; */
-        /* background-color:rgb(241, 150, 13); */
-       
-    
     /* payment process */
     .order-process, .menu{
         display:block;
