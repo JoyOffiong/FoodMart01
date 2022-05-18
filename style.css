@@ -9,22 +9,25 @@ a{
 }
 i{
       display: block;
-      color:black;
+      color: rgb(240, 198, 12);
       width: 100px;
+      font-size: 26px;
 }
+
 img{
       display: block;
       width: 100%;
 }
-body{
+.mainwrap{
       margin:0px;
       padding: 0px;
-      background-color: rgb(240, 198, 12);
+      background-color: rgb(246, 241, 241);
 }
 .section1{
       margin: 5%;
+      margin-top: 2%;
       padding: 2%;
-      background-color: rgb(241, 245, 248)
+      /* background-color: rgb(241, 245, 248) */
 }
     /* Header Styling */
 header{
@@ -36,11 +39,11 @@ header{
       width: 20%;
 }
 .logo h2{
-      color: rgb(184, 184, 8);
+      color: rgb(251, 251, 7);
       font-size: 30px;
 }
 .logo span{
-       color: green;
+       color: rgb(15, 238, 15);
        font-size: 25px;
 }
  nav{
@@ -64,7 +67,7 @@ header{
       display: flex;
       justify-content: space-around;
       align-items: center;
-      width: 70%;
+      width: 60%;
       text-align: center;
       /* margin-right: 40px; */
 }
@@ -73,7 +76,7 @@ header{
 }
 .nav-menu a{
       text-align: center;
-      color: green;
+      color:rgb(241, 150, 13);
       
 }
 ul .nav-menu:hover{
@@ -81,9 +84,10 @@ ul .nav-menu:hover{
 }
 .btn-cart{
       display: flex;
-      width: 30%;
+      width: 40%;
       justify-content: space-around;
 }
+
 button{
       width: 100px;
       height: 35px;
@@ -92,6 +96,29 @@ button{
       border: 2px solid rgb(241, 150, 13);
       border-radius: 5px; 
 }
+.theme{  
+      color:none;
+      background-color:transparent;
+      border:none;
+      border-radius: none;     
+}
+.mainwrap.dark{
+      background-color: rgb(73, 68, 68);
+      color: white;
+}    
+ .theme.dark{
+      color: black;
+} 
+.hamburger-icon.dark, .close.dark{
+      fill: rgb(241, 150, 13);
+}
+/*
+.section1.dark
+.section2.dark{
+      color: white;
+      background-color: black;
+
+} */
 .shopping-cart{
       width: 30px;
       height: 30px;
@@ -140,7 +167,7 @@ button{
       margin-bottom: 0;
       padding:4%;
       padding-bottom: 0px;
-      background-color: rgb(241, 245, 248);    
+      /* background-color: rgb(241, 245, 248);     */
   }
 .how-to-order{
       margin: 0px auto;
@@ -169,8 +196,9 @@ i, svg{
       border-radius: 10px;
       width: 23%;
       padding: 5px;
+      padding-top: 30px;
       text-align: center;
-      box-shadow:0px 1px 1px rgba(27, 9, 9, 0.2), -0px -1px 1px rgba(27, 9, 9, 0.2)
+      box-shadow:0px 1px 3px rgba(27, 9, 9, 0.2), -0px -1px 3px rgba(27, 9, 9, 0.2)
     
 }
 
@@ -239,15 +267,29 @@ i, svg{
       border-radius: 5px;
       border: none;
 }
-footer{
-      background-color: white;
-      /* width: 0%; */
+.menu button{
+margin: auto;
+margin-bottom: 2%;
+
+}
+.steps, .meals{
+      background-color: inherit;
+}
+.meals p, .steps p, .steps h3{
+      color: inherit;
+}
+.footer{
+      background-color: inherit;
+      height: 20vh;
       padding: 1% 0;
       margin-top: 0;
-      margin-left: 5%;
-      margin-right: 5%;
-      margin-bottom: 5%;
+      border:none;
+      border-top: 2px solid rgb(241, 150, 13);
+      /* margin-left: 5%; */
+      /* margin-right: 5%; */
+      /* margin-bottom: 5%; */
 }
+
      
 footer button{
       width: 130px;
@@ -266,21 +308,35 @@ footer button{
       /* header-styling */
       header {
             position: relative;
+            margin-right: 0;
+            padding-right: 0;
+      }
+      .section1{
+            padding: 0;
+            padding-left: 2%;
       }
       .nav-menu li{
             display: none;
       }
+      .theme{
+            position: absolute;
+                 right: 15%;
+           }
       .btn-cart{
             display: none;
       }
+      
        .nav-toggle{
             position: absolute;
             cursor: pointer;
             margin:0rem 5rem;
             right: 0;
-            }
+            transform: 0.3s ease;
+      }
+
       .nav-toggle .hamburger-icon{
             display: block;
+            transform: 0.3s ease;
       }
         svg{
             width:1.5rem;
@@ -291,23 +347,26 @@ footer button{
              display: block;
        }
          .nav-checkbox:checked ~ .nav-menu li{
-            display:block;    
+            display:block; 
       }
          .nav-checkbox:checked ~ label.nav-toggle .hamburger-icon{
              display: none;
+            
       }
-      .nav-checkbox:checked ~ .nav-menu {
-            background-color: white;
-            opacity: 0.9;
-            margin-top: 2rem;
+      .nav-checkbox:checked ~ .nav-menu{
+            background-color: rgb(121, 110, 110);
+            /* opacity: 0.9; */
+            /* margin-top: 2rem; */
             height: 40vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 3px;
+            /* gap: 3px; */
+            transition: 0.3s ease-in-out;
             /* margin: 3rem; */
+            line-height: 2px;
             margin-right: 0;
-            margin-top: 10%;
+            /* margin-top: 10%; */
             position: absolute;
             top: 50px;
             width: 50%;
@@ -340,6 +399,12 @@ footer button{
       .menu{
           margin-bottom: 20px;
         }
+        .steps, .meals{
+            background-color: inherit;
+      }
+      .meals p, .steps p, .steps h3{
+            color: inherit;
+      }
   }
   
   /* Mobile Layout */
@@ -352,6 +417,9 @@ footer button{
             margin:0rem 1rem;
             right: 0;
             }
+      svg{
+            fill: inherit;
+      }
        .food-picture{
            display: none;
        }
@@ -380,6 +448,12 @@ footer button{
         width: 100%;
         margin: 10px auto;
     }
+    .steps, .meals{
+      background-color: inherit;
+}
+.meals p, .steps p, .steps h3{
+      color: inherit;
+}
   }
     
   
